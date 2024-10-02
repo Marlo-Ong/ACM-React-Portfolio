@@ -4,7 +4,7 @@ interface ProjectProps {
   image?: string;
 }
 
-const Section: React.FC<ProjectProps> = ({ title, description, image }) => (
+const Project: React.FC<ProjectProps> = ({ title, description, image }) => (
   <div>
     <h3>{title}</h3>
     {description}
@@ -12,4 +12,15 @@ const Section: React.FC<ProjectProps> = ({ title, description, image }) => (
   </div>
 );
 
-export default Section
+// ---- THE SAME! ----
+// function Project(props: ProjectProps) {
+//   return (
+//     <div>
+//       <h3>{props.title}</h3>
+//       {props.description}
+//       {props.image && <img src={props.image} />}
+//     </div>
+//   )
+// }
+
+export default Project

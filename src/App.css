@@ -95,3 +95,11 @@ nav button.active {
   margin-bottom: 5px;
   color: #4a90e2;
 }
+
+.section {
+  display: none;
+}
+
+.section active {
+  display: block;
+}

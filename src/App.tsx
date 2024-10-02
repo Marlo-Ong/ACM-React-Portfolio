@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { navItems, sections } from './Sections';
+import { NavItem } from './NavItem/NavItem';
 import Section from './Section/Section';
 import './App.css';
 
@@ -17,14 +18,14 @@ const App = () => {
         </div>
 
         <nav>
-          {navItems.map(({ key, icon: Icon, label }) => (
-            <button
+          {navItems.map(({ key, icon, label }) => (
+            <NavItem
               key={key}
+              icon={icon}
+              label={label}
+              isActive={activeSection === key}
               onClick={() => setActiveSection(key)}
-              className={activeSection === key ? 'active' : ''}
-            >
-              <Icon className="icon" size={16} /> {label}
-            </button>
+            />
           ))}
         </nav>
 

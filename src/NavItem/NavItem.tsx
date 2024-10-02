@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, User, Code, Briefcase, Mail } from 'lucide-react';
 
 interface NavItemProps {
   icon: LucideIcon;
@@ -7,7 +7,7 @@ interface NavItemProps {
   onClick: () => void;
 }
 
-export const NavItem: React.FC<NavItemProps> = ({ icon: Icon, label, isActive, onClick }) => (
+const NavItem: React.FC<NavItemProps> = ({ icon: Icon, label, isActive, onClick }) => (
   <button
     onClick={onClick}
     className={isActive ? 'active' : ''}
@@ -15,3 +15,13 @@ export const NavItem: React.FC<NavItemProps> = ({ icon: Icon, label, isActive, o
     <Icon className="icon" size={16} /> {label}
   </button>
 );
+
+export default NavItem;
+
+export const navItems = [
+  // Keys correspond to entries in the `sections` list
+  { key: 'aboutSection', icon: User, label: 'About' },
+  { key: 'skillsSection', icon: Code, label: 'Skills' },
+  { key: 'projectsSection', icon: Briefcase, label: 'Projects' },
+  { key: 'contactSection', icon: Mail, label: 'Contact' }
+];

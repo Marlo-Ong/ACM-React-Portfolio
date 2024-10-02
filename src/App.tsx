@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { navItems, sections } from './Sections';
-import { NavItem } from './NavItem/NavItem';
-import Section from './Section/Section';
+import NavItem, { navItems } from './NavItem/NavItem';
+import Section, { sections } from './Section/Section';
 import './App.css';
 
 const App = () => {

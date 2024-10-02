@@ -27,7 +27,7 @@ export default Project
 
 // Declare projects:
 
-import FillerImage from './assets/filler-image.png';
+import FillerImage from '../assets/filler-image.png';
 
 const project1 = {
   title: "Project 1",
@@ -42,4 +42,4 @@ const project2 = {
 }
 
 
-export const projects = [project1, project2]
+export const allProjects = [project1, project2]

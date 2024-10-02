@@ -23,9 +23,9 @@ function Section(props: { title: string, content: React.ReactNode }) {
 export default Section
 
 // Declare projects
-import Project, { projects } from '../Project/Project';
+import Project, { allProjects } from '../Project/Project';
 
-const aboutSection = {
+const about = {
   title: "About Me",
   content: (
     <div>
@@ -34,7 +34,7 @@ const aboutSection = {
     </div>)
 }
 
-const skillsSection = {
+const skills = {
   title: "Skills",
   content: (
     <ul>
@@ -46,11 +46,11 @@ const skillsSection = {
   )
 }
 
-const projectsSection = {
+const projects = {
   title: "Projects",
   content: (
     <>
-      {projects.map(({ title, description, image }) => (
+      {allProjects.map(({ title, description, image }) => (
         <Project
           title={title}
           description={description}
@@ -61,7 +61,7 @@ const projectsSection = {
   )
 }
 
-const contactSection = {
+const contact = {
   title: "Contact",
   content: (
     <>
@@ -72,4 +72,4 @@ const contactSection = {
   )
 }
 
-export const sections = { aboutSection, skillsSection, projectsSection, contactSection };
+export const allSections = { about, skills, projects, contact };

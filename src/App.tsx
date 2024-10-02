@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import NavItem, { navItems } from './NavItem/NavItem';
-import Section, { sections } from './Section/Section';
+import Section, { allSections } from './Section/Section';
 import './App.css';
 
 const App = () => {
@@ -29,10 +29,10 @@ const App = () => {
         </nav>
 
         <div className="content">
-          {activeSection in sections && (
+          {activeSection in allSections && (
             <Section
-              title={sections[activeSection as keyof typeof sections].title}
-              content={sections[activeSection as keyof typeof sections].content}
+              title={allSections[activeSection as keyof typeof allSections].title}
+              content={allSections[activeSection as keyof typeof allSections].content}
             />
           )}
         </div>

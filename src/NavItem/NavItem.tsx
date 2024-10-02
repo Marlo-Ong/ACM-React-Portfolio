@@ -20,8 +20,8 @@ export default NavItem;
 
 export const navItems = [
   // Keys correspond to entries in the `sections` list
-  { key: 'aboutSection', icon: User, label: 'About' },
-  { key: 'skillsSection', icon: Code, label: 'Skills' },
-  { key: 'projectsSection', icon: Briefcase, label: 'Projects' },
-  { key: 'contactSection', icon: Mail, label: 'Contact' }
+  { key: 'about', icon: User, label: 'About' },
+  { key: 'skills', icon: Code, label: 'Skills' },
+  { key: 'projects', icon: Briefcase, label: 'Projects' },
+  { key: 'contact', icon: Mail, label: 'Contact' }
 ];
